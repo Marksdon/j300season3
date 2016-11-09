@@ -1,4 +1,4 @@
-package priv.xzc.j300season3.pattern;
+package priv.xzc.j300season3.pattern.singleton;
 
 public class Client {
 

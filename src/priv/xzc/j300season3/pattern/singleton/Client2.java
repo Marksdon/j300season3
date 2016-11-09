@@ -1,4 +1,4 @@
-package priv.xzc.j300season3.pattern;
+package priv.xzc.j300season3.pattern.singleton;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * 测试反射和反序列化破解单例模式
+ * 反射和反序列化对于枚举是不起作用的
  * @author randall
  *
  */
@@ -25,19 +26,20 @@ public class Client2 {
 		SigletonDomo6 s4 = c.newInstance();
 		System.out.println(s3);
 		System.out.println(s4);*/
-		
+
 		//通过反序列化的方式构造多个对象
 		FileOutputStream fos = new FileOutputStream("d:/a.txt");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(s1);
 		oos.close();
 		fos.close();
-		
+
 		ObjectInputStream ois = new ObjectInputStream(
 				new FileInputStream("d:/a.txt")
 				);
 		SigletonDomo6 s3 = (SigletonDomo6) ois.readObject();
 		System.out.println(s3);
-		
+		ois.close();
+
 	}
 }

@@ -1,4 +1,4 @@
-package priv.xzc.j300season3.pattern;
+package priv.xzc.j300season3.pattern.singleton;
 /**
  * 测试枚举方式(避免了反射和序列化)
  * 这种方式：遗憾的没有延时加载

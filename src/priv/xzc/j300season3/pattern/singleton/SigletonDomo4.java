@@ -1,4 +1,4 @@
-package priv.xzc.j300season3.pattern;
+package priv.xzc.j300season3.pattern.singleton;
 /**
  * 测试静态内部类的实现单例模式
  * 这种方式：线程安全，调用效率高，并且实现了延时加载
