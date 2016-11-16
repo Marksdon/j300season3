@@ -5,12 +5,13 @@ package priv.xzc.j300season3.pattern.prototype;
  * 效率，短时间建造大量对象,并且new对象过程比较消耗时间，可以考虑原型模式（clone方式）
  * <p>与new做比较
  * 
+ * 
+ * <p>应用场景：
  * spring中bean对象：单例模式+原型模式（当然原型模式和工厂模式搭配起来）
  * @author randall
  *
  */
 public class Client4 {
-
 	/**
 	 * 测试clone对象消耗时间
 	 * @param size clone对象的次数
@@ -47,19 +48,19 @@ public class Client4 {
 
 	}
 }
-	class Laptop implements Cloneable{
-		public Laptop() {
-			try {
-				Thread.sleep(10);//模拟new对象消耗时间的过程
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		@Override
-		protected Object clone() throws CloneNotSupportedException {
-			Object obj = super.clone();//直接调用object对象的clone（）方法实现克隆
-			return obj;
+class Laptop implements Cloneable{
+	public Laptop() {
+		try {
+			Thread.sleep(10);//模拟new对象消耗时间的过程
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		Object obj = super.clone();//直接调用object对象的clone（）方法实现克隆
+		return obj;
+	}
+}
 

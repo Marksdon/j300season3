@@ -1,7 +1,7 @@
 package priv.xzc.j300season3.pattern.singleton;
 /**
  * 测试懒汉式单例模式
- * 缺点：高并发下，调用低
+ * 缺点：高并发下，调用效率低
  * @author randall
  *
  */

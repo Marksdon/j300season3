@@ -18,3 +18,7 @@ public class SigletonDomo4 {
 		return SiggletonClassInstance.instance;
 	}
 }
+
+
+
+

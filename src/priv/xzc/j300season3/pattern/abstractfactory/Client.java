@@ -3,6 +3,8 @@ package priv.xzc.j300season3.pattern.abstractfactory;
 /**
  * 抽象工厂模式：
  * <p>对增加新的产品无能为力，适合增加产品族
+ * 
+ * <p>抽象工厂模式适合增添新的产品族(一堆产品)
  * @author randall
  *
  */

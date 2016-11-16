@@ -2,6 +2,8 @@ package priv.xzc.j300season3.pattern.simplefactory;
 
 /**
  * 简单工厂
+ * 
+ * <p>简单工厂模式的写法一
  * @author randall
  *
  */

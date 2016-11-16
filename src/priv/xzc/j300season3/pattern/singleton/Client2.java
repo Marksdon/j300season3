@@ -19,9 +19,11 @@ public class Client2 {
 		System.out.println(s1);
 		System.out.println(s2);
 		//通过反射的方式直接调用私有构造器
-		/*Class<SigletonDomo6> clazz = (Class<SigletonDomo6>) Class.forName("priv.xzc.j300season3.pattern.SigletonDomo6");
+		/*Class<SigletonDomo6> clazz = (Class<SigletonDomo6>) Class.forName("priv.xzc.j300season3.pattern.singleton.SigletonDomo6");
 		Constructor<SigletonDomo6> c = clazz.getDeclaredConstructor(null); 
 		c.setAccessible(true);//取消安全检查，破解单例
+		//这种不是通过单例获取的对象，所以在防止破解中不会起作用
+		//有效的作用是，必须先通过单例获取对象后，再使用这个就是有效的
 		SigletonDomo6 s3 = c.newInstance();
 		SigletonDomo6 s4 = c.newInstance();
 		System.out.println(s3);
